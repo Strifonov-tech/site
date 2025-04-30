@@ -8,154 +8,13 @@
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
   />
-  <style>
-    :root {
-      --primary-green: #00703c;
-      --secondary-blue: #2c3e91;
-      --light-bg: #f4f9f4;
-      --text-dark: #222;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text-dark);
-    }
-
-    .navbar-fixed-top {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 999;
-    }
-    header {
-      background-color: var(--primary-green);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav {
-      background-color: var(--secondary-blue);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      position: relative;
-    }
-
-    nav a:hover {
-      color: #c2f0da;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: var(--secondary-blue);
-      top: 100%;
-      left: 0;
-      z-index: 1000;
-      min-width: 160px;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: var(--primary-green);
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .lang-switch {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--primary-green);
-    }
-
-    .news-item {
-      background: white;
-      border-left: 5px solid var(--secondary-blue);
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    #map {
-      height: 300px;
-      margin-top: 20px;
-      border: 2px solid var(--primary-green);
-    }
-
-    footer {
-      background-color: var(--primary-green);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js"></script> 
+  <script src="footer.js"></script>
 </head>
 <body>
-  <header>
-    <h1 data-bg="ЧПГТП 'Райко Цончев'" data-en="Raĭko Tsonchev Private School">ЧПГТП "Райко Цончев"</h1>
-    <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
-  </header>
-
-  <nav>
-    <div class="nav-links">
-      <div class="dropdown">
-        <a href="#" data-bg="За училището" data-en="About the School">За училището</a>
-        <div class="dropdown-content">
-          <a href="#mission" data-bg="Мисия" data-en="Mission">Мисия</a>
-        </div>
-      </div>
-      <a href="#news" data-bg="Новини" data-en="News">Новини</a>
-      <a href="#contact" data-bg="Контакти" data-en="Contact">Контакти</a>
-    </div>
-    <div class="lang-switch" onclick="toggleLanguage()">🌐 EN / BG</div>
-  </nav>
+      <!-- Load header -->
+      <div id='header'></div>
 
   <section id="about">
     <h2 data-bg="За нас" data-en="About">За нас</h2>
@@ -221,9 +80,8 @@ data-en="Our mission is to build dynamic individuals capable of changing themsel
     <div id="map"></div>
   </section>
 
-  <footer>
-    <p>© 2025 ЧПГТП "Райко Цончев" | All rights reserved</p>
-  </footer>
+    <!-- Load footer -->
+    <div id='footer'></div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>

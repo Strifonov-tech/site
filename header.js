@@ -1,11 +1,10 @@
 let header_code = `
-<header>
-    <h1 data-bg="ЧПГТП 'Райко Цончев'" data-en="Raiko Tsonchev Private School">
-      ЧПГТП "Райко Цончев"
-    </h1>
-    <p data-bg="Официален сайт на училището" data-en="Official school website">
-      Официален сайт на училището
-    </p>
+  <header>
+    <div class="header-img"></div>
+      <a href="home.html">
+        <img src="rconchev_logo.png" alt="ЧПГТП 'Райко Цончев'" class="logo" style="max-width: 20%; max-height: 20%;">
+      </a>
+      <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
   </header>
   
   <nav>
@@ -34,3 +33,7 @@ let header_code = `
       <div class="lang-switch" onclick="toggleLanguage()">🌐 EN / BG</div>
     </div>
   </nav>`;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("header").innerHTML = header_code;
+  });

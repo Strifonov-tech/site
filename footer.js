@@ -4,3 +4,7 @@ let footer_code = `<footer>
        © 2025 ЧПГТП "Райко Цончев" | Всички права запазени
     </p>
 </footer>`;
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("footer").innerHTML = footer_code;
+});

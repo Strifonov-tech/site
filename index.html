@@ -8,24 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 data-bg="ЧПГТП 'Райко Цончев'" data-en="Raiko Tsonchev Private School">ЧПГТП "Райко Цончев"</h1>
-    <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
-  </header>
-
-  <nav>
-    <div class="nav-links">
-      <div class="dropdown">
-        <a href="#" data-bg="За училището" data-en="About School">За училището</a>
-        <div class="dropdown-content">
-          <a href="mission.html" data-bg="Мисия" data-en="Mission">Мисия</a>
-        </div>
-      </div>
-      <a href="#news" data-bg="Новини" data-en="News">Новини</a>
-      <a href="#contact" data-bg="Контакти" data-en="Contact">Контакти</a>
-    </div>
-    <div class="lang-switch" onclick="toggleLanguage()">🌐 EN / BG</div>
-  </nav>
+  <!-- Load header -->
+  <div id='header'></div>
 
   <section id="about">
     <h2 data-bg="Начало" data-en="Home">Начало</h2>
@@ -65,29 +49,43 @@
     <div id="map"></div>
   </section>
 
-  <footer>
-    <p>© 2025 ЧПГТП "Райко Цончев" | All rights reserved</p>
-  </footer>
+  <!-- Load footer -->
+  <div id="footer"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="header.js"></script> 
+  <script src="footer.js"></script>
   <script>
-    // Leaflet Map
-    const map = L.map('map').setView([43.567723, 27.827067], 16);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    L.marker([43.567723, 27.827067]).addTo(map)
-      .bindPopup('ЧПГТП "Райко Цончев"<br>ул. България 3')
-      .openPopup();
 
     // Language toggle
     let currentLang = "bg";
     function toggleLanguage() {
       currentLang = currentLang === "bg" ? "en" : "bg";
+      runLanguageToggle();
+    }
+
+    function runLanguageToggle() {
       document.querySelectorAll('[data-bg]').forEach(el => {
         el.textContent = el.getAttribute(`data-${currentLang}`);
       });
     }
+
+    // Search bar toggle
+    function toggleSearch() {
+      const searchBar = document.getElementById("search-bar");
+      searchBar.style.display = searchBar.style.display === "block" ? "none" : "block";
+    }
+
+    // Leaflet Map
+    document.addEventListener("DOMContentLoaded", function () {
+      const map = L.map('map').setView([43.567723, 27.827067], 16);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      L.marker([43.567723, 27.827067]).addTo(map)
+        .bindPopup('ЧПГТП "Райко Цончев"<br>ул. България 3')
+        .openPopup();
+    });
   </script>
 </body>
 </html>
