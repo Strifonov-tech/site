@@ -1,7 +1,7 @@
 let header_code = `
   <header>
     <div class="header-img"></div>
-      <a href="home.html">
+      <a href="index.html">
         <img src="rconchev_logo.png" alt="ЧПГТП 'Райко Цончев'" class="logo" style="max-width: 20%; max-height: 20%;">
       </a>
       <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
