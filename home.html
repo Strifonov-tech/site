@@ -5,126 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ЧПГТП "Райко Цончев"</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <style>
-    :root {
-      --primary-green: #00703c;
-      --secondary-blue: #2c3e91;
-      --light-bg: #f4f9f4;
-      --text-dark: #222;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text-dark);
-    }
-
-    header {
-      background-color: var(--primary-green);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav {
-      background-color: var(--secondary-blue);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: #c2f0da;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: var(--secondary-blue);
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      top: 100%;
-      left: 0;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 20px;
-      white-space: nowrap;
-    }
-
-    .lang-switch {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--primary-green);
-    }
-
-    .news-item {
-      background: white;
-      border-left: 5px solid var(--secondary-blue);
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    #map {
-      height: 300px;
-      margin-top: 20px;
-      border: 2px solid var(--primary-green);
-    }
-
-    footer {
-      background-color: var(--primary-green);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1 data-bg="ЧПГТП 'Райко Цончев'" data-en="Raiko Tsonchev Private School">ЧПГТП "Райко Цончев"</h1>
-    <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
+    <div class="header-img"></div>
+      <a href="home.html">
+        <img src="rconchev_logo.png" alt="ЧПГТП 'Райко Цончев'" class="logo" style="max-width: 20%; max-height: 20%;">
+      </a>
+      <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
   </header>
 
   <nav>
@@ -153,7 +42,7 @@
     <h2 data-bg="Новини" data-en="News">Новини</h2>
     <div class="news-item">
       <h3 data-bg="🎉 Начало на новата учебна година" data-en="🎉 Start of the New School Year">
-        🎉 Начало на новата учебна година
+        🎉 Начало на новата учебна година<styl
       </h3>
       <p data-bg="Училището стартира с нови проекти и ентусиазъм!" 
          data-en="The school starts with new projects and great enthusiasm!">
