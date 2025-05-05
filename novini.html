@@ -1,18 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="header.js"></script>
-    <script src="footer.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новини</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    .card-content a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-      <!-- Load header -->
-  <div id='header'></div>
-  
-    <!-- Load footer -->
-    <div id='footer'></div>
+
+  <!-- Dynamic Header -->
+  <div id="header"></div>
+
+  <!-- News Cards -->
+  <div class="container">
+    <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/05/494104591_1251830150282732_972075500997594727_n.jpg" alt="Новина 1">
+      <div class="card-content">
+        <h3>Повод за гордост: 9 медала завоюваха нашите ученици</h3>
+          <a href="https://nextgen-rayko.com/повод-за-гордост-9-медала-завоюваха-наш/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+        </div>
+    </div>
+      <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/04/492137028_1241711497961264_5569278709078925963_n-1152x1536.jpg" alt="Новина 2">
+      <div class="card-content">
+        <h3>Второ издание на конкурса „Наука с поукa</h3>
+          <a href="https://nextgen-rayko.com/второ-издание-на-конкурса-наука-с-по/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+      </div>
+    </div>  
+      
+
+    
+        
+
+    <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/04/491012381_993341436318064_6953655514741787773_n-1536x1152.jpg" alt="Новина 3">
+      <div class="card-content">
+        <h3>Клуб по азиатска култура: запознахме се с играта “Го” и други настолни игри</h3>
+        <a href="https://nextgen-rayko.com/elementor-1796/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/03/1000008064.jpg" alt="Новина 4">
+      <div class="card-content">
+        <h3>Оригами - хартиени фигури с душа</h3>
+        <a href="https://nextgen-rayko.com/от-лист-хартия-до-изкуство-учениците-о/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/03/screenshot_0-2025-03-13T14.12.54-e1741899798760-2048x922.png" alt="Новина 5">
+      <div class="card-content">
+        <h3>Бинарен урок по биология и информатика – интеграция на наука и съвременни технологии</h3>
+        <a href="https://nextgen-rayko.com/stem-обучение/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://nextgen-rayko.com/wp-content/uploads/2025/03/image00002-1024x768.jpeg" alt="Новина 6">
+      <div class="card-content">
+        <h3>„Образователна среща</h3>
+         <a href="https://nextgen-rayko.com/образователна-среща-за-иновативни-ме/">ПРОЧЕТЕТЕ ПОВЕЧЕ »</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Footer -->
+  <div id="footer"></div>
+
 </body>
 </html>
+       
