@@ -30,7 +30,7 @@ let header_code = `
         <button onclick="toggleSearch()" class="search-btn">🔍</button>
         <input type="text" id="search-bar" placeholder="Търси..." />
       </div>
-      <div class="lang-switch" onclick="toggleLanguage()">🌐 EN / BG</div>
+      <div class="lang-switch" onclick="toggleLanguage()">🌐EN / BG</div>
     </div>
   </nav>`;
 

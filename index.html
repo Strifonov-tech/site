@@ -41,13 +41,6 @@
     </div>
   </section>
 
-  <section id="contact">
-    <h2 data-bg="Контакти" data-en="Contact">Контакти</h2>
-    <p><strong data-bg="Адрес:" data-en="Address:">Адрес:</strong> ул. "България" 3, гр. Добрич</p>
-    <p><strong data-bg="Телефон:" data-en="Phone:">Телефон:</strong> +359 58 123 456</p>
-    <p><strong>Email:</strong> info@rct-school.bg</p>
-    <div id="map"></div>
-  </section>
 
   <!-- Load footer -->
   <div id="footer"></div>
@@ -75,17 +68,6 @@
       const searchBar = document.getElementById("search-bar");
       searchBar.style.display = searchBar.style.display === "block" ? "none" : "block";
     }
-
-    // Leaflet Map
-    document.addEventListener("DOMContentLoaded", function () {
-      const map = L.map('map').setView([43.567723, 27.827067], 16);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-      L.marker([43.567723, 27.827067]).addTo(map)
-        .bindPopup('ЧПГТП "Райко Цончев"<br>ул. България 3')
-        .openPopup();
-    });
   </script>
 </body>
 </html>
