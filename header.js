@@ -2,11 +2,10 @@ let header_code = `
   <header>
     <div class="header-img"></div>
       <a href="index.html">
-        <img src="rconchev_logo.png" alt="ЧПГТП 'Райко Цончев'" class="logo" style="max-width: 20%; max-height: 20%;">
+        <img src="rconchev_logo.png" alt="ЧПГТП 'Райко Цончев'" class="logo"/>
       </a>
       <p data-bg="Официален сайт на училището" data-en="Official school website">Официален сайт на училището</p>
   </header>
-  
   <nav>
     <div class="nav-links">
       <div class="dropdown">
@@ -22,7 +21,7 @@ let header_code = `
         </div>
       </div>
       <a href="index.html" data-bg="Начало" data-en="Home">Начало</a>
-      <a href="news.html" data-bg="Новини" data-en="News">Новини</a>
+      <a href="novini.html" data-bg="Новини" data-en="News">Новини</a>
       <a href="contact.html" data-bg="Контакти" data-en="Contact">Контакти</a>
     </div>
     <div class="nav-right">
