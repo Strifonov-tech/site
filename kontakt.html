@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-bg="Контакти" data-en="Contact">Контакти</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+</head>
+<body>
+
+  <!-- Dynamic Header -->
+  <div id="header"></div>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2 data-bg="Свържете се с нас" data-en="Contact Us">Свържете се с нас</h2>
+        <p><i class="fas fa-envelope"></i> <a href="info-800325@edu.mon.bg">info-800325@edu.mon.bg</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:">058 655 645</a></p>
+        <a href="https://www.facebook.com/raiko.tsonchev" target="_blank" style="text-decoration: none; border-bottom: 2px solid rgb(255, 0, 106);">
+            Виж нашата Facebook група
+          </a>
+          
+          
+          
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <input type="text" name="firstName" placeholder="Име*" data-bg="Име*" data-en="First Name*" required>
+            <input type="text" name="lastName" placeholder="Фамилия*" data-bg="Фамилия*" data-en="Last Name*" required>
+          </div>
+          <div class="form-row">
+            <input type="tel" name="phone" placeholder="Телефон*" data-bg="Телефон*" data-en="Phone*" required>
+            <input type="email" name="email" placeholder="Имейл*" data-bg="Имейл*" data-en="Email*" required>
+          </div>
+          <input type="text" name="subject" placeholder="Относно*" data-bg="Относно*" data-en="Subject*" required>
+          <textarea name="message" placeholder="Съобщение:*" data-bg="Съобщение:*" data-en="Message:*" required></textarea>
+          <button type="submit" data-bg="ИЗПРАЩАНЕ" data-en="SEND">ИЗПРАЩАНЕ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer -->
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    let currentLang = "bg";
+    function toggleLanguage() {
+      currentLang = currentLang === "bg" ? "en" : "bg";
+      document.querySelectorAll('[data-bg]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+      document.querySelectorAll('[placeholder]').forEach(el => {
+        if (el.hasAttribute(`data-${currentLang}`)) {
+          el.setAttribute('placeholder', el.getAttribute(`data-${currentLang}`));
+        }
+      });
+    }
+  </script>
+</body>
+</html>
