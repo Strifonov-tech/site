@@ -12,6 +12,7 @@ let header_code = `
         <a href="#" data-bg="За училището" data-en="About the School">За училището</a>
         <div class="dropdown-content">
           <a href="mission.html" data-bg="Мисия" data-en="Mission">Мисия</a>
+          <a href="kandidatstvane.html" data-bg="Кандидатстване" data-en="Apply for school">Кандидатстване</a>
         </div>
       </div>
       <div class="dropdown">
@@ -22,7 +23,7 @@ let header_code = `
       </div>
       <a href="index.html" data-bg="Начало" data-en="Home">Начало</a>
       <a href="novini.html" data-bg="Новини" data-en="News">Новини</a>
-      <a href="contact.html" data-bg="Контакти" data-en="Contact">Контакти</a>
+      <a href="kontakt.html" data-bg="Контакти" data-en="Contact">Контакти</a>
     </div>
     <div class="nav-right">
       <div class="search-container">

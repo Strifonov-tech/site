@@ -1,17 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="header.js"></script>
-    <script src="footer.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-bg="Контакти" data-en="Contact">Контакти</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
 </head>
 <body>
-      <!-- Load header -->
-  <div id='header'></div>
-    <!-- Load footer -->
-    <div id='footer'></div>
+
+  <!-- Dynamic Header -->
+  <div id="header"></div>
+
+    <!-- Application Section -->
+    <section class="application-section">
+        <h2 data-bg="Как да кандидатствате?" data-en="How to Apply?">Как да кандидатствате?</h2>
+    <p data-bg="Попълнете формуляра за кандидатстване, който можете да получите от училището или да изтеглите от този сайт." 
+        data-en="Fill out the application form, which you can get from the school or download from this website.">
+        Попълнете формуляра за кандидатстване, който можете да получите от училището или да изтеглите от този сайт.
+  </p>
+    <p data-bg="Предоставете необходимите документи: копие от удостоверение за завършен клас, медицинско свидетелство, снимка и удостоверение за раждане." 
+        data-en="Submit the required documents: copy of previous class certificate, medical note, photo, and birth certificate.">
+        Предоставете необходимите документи: копие от удостоверение за завършен клас, медицинско свидетелство, снимка и удостоверение за раждане.
+    </p>
+    <p data-bg="Подайте документите в администрацията на училището в работно време." 
+        data-en="Submit the documents to the school administration during working hours.">
+        Подайте документите в администрацията на училището в работно време.
+    </p>
+    <p data-bg="Очаквайте обаждане или имейл с потвърждение и допълнителна информация." 
+        data-en="Wait for a call or email with confirmation and further instructions.">
+        Очаквайте обаждане или имейл с потвърждение и допълнителна информация.
+    </p>
+
+  <h2 data-bg="Краен срок за кандидатстване" data-en="Application Deadline">Краен срок за кандидатстване</h2>
+  <p data-bg="Кандидатури се приемат до 30 юни всяка година. Препоръчваме ранно кандидатстване." 
+     data-en="Applications are accepted until June 30 each year. Early application is recommended.">
+     Кандидатури се приемат до 30 юни всяка година. Препоръчваме ранно кандидатстване.
+  </p>
+
+  </section>
+
+  <!-- Dynamic Footer -->
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    let currentLang = "bg";
+    function toggleLanguage() {
+      currentLang = currentLang === "bg" ? "en" : "bg";
+      document.querySelectorAll('[data-bg]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+      document.querySelectorAll('[placeholder]').forEach(el => {
+        if (el.hasAttribute(`data-${currentLang}`)) {
+          el.setAttribute('placeholder', el.getAttribute(`data-${currentLang}`));
+        }
+      });
+    }
+  </script>
 </body>
 </html>
